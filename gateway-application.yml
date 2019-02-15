@@ -31,7 +31,7 @@ zuul:
       url: http://localhost:9875
     call-hello-service:
       path: /**
-
+      url: http://saying-hello-service
 logging:
   level:
     ROOT: WARN
