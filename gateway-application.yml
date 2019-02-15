@@ -29,7 +29,8 @@ zuul:
     second-saying-hello-service:
       path: /**
       url: http://localhost:9875
-    call-hello-service: /hi/**
+    call-hello-service:
+      path: /**
 
 logging:
   level:
