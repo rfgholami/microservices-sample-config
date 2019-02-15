@@ -27,7 +27,7 @@ zuul:
   routes:
     composite-service: /product/**
     second-saying-hello-service:
-      path: /second/**
+      path: /**
       url: http://localhost:9875
 
 logging:
