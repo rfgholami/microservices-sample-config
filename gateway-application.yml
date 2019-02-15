@@ -26,7 +26,7 @@ zuul:
   prefix: /api
   routes:
     composite-service: /product/**
-    foos:
+    second-saying-hello-service:
       path: /second/**
       url: http://localhost:9875
 
