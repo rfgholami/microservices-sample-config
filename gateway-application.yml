@@ -28,7 +28,7 @@ zuul:
     composite-service: /product/**
     foos:
       path: /second/**
-      url: http://localhost:9875/hello
+      url: http://localhost:9875
 
 logging:
   level:
