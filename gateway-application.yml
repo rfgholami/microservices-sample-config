@@ -26,6 +26,9 @@ zuul:
   prefix: /api
   routes:
     composite-service: /product/**
+    foos:
+      path: /second/**
+      url: http://localhost:9875/hello
 
 logging:
   level:
