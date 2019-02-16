@@ -28,27 +28,38 @@ zuul:
     composite-service: /product/**
     second-saying-hello-service:
       path: /**
-      url: http://localhost:9875
+      url: http://second-saying-hello-service
     call-hello-service:
       path: /**
       url: http://saying-hello-service
+
 logging:
   level:
     ROOT: WARN
-    se.callista: INFO
-
-    # Set DEBUG level to activate our log-filter to log each request and response
-    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
-
-    # Get info regarding connection to the cofig server and retries if required
-    org.springframework.cloud.config.client.ConfigServicePropertySourceLocator: INFO
-    org.springframework.retry.support.RetryTemplate: DEBUG
-
-    # Set INFO to see the allocated port
-    org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
-    org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO
-
-    # Set DEBUG level on Hystrix to get an error message when a fallback method is used.
-    com.netflix.hystrix: DEBUG
-    com.netflix.hystrix.strategy.properties.HystrixPropertiesChainedArchaiusProperty: WARN
----
+    se:
+      callista: INFO
+    org:
+      springframework:
+        web:
+          filter:
+          CommonsRequestLoggingFilter: DEBUG
+        cloud:
+          config:
+            client:
+              ConfigServicePropertySourceLocator: INFO
+        retry:
+          support:
+            RetryTemplate: DEBUG
+        boot:
+          context:
+            embedded:
+              tomcat:
+                TomcatEmbeddedServletContainer: INFO
+              undertow:
+                UndertowEmbeddedServletContainer: INFO
+    com:
+      netflix:
+        hystrix: DEBUG
+          strategy:
+            properties:
+              HystrixPropertiesChainedArchaiusProperty: WARN
