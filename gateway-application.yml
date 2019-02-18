@@ -24,13 +24,9 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    call-hello-service:
-      path: /s1/**
-      url: http://call-hello-service
-    saying-hello-service:
-      path: /s2/**
-      url: http://saying-hello-service
-
+    composite-service: /product/**
+    call-hello-service: /s1/**
+    saying-hello-service: /s2/**
 logging:
   level:
     ROOT: WARN
