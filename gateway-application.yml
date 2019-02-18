@@ -31,7 +31,7 @@ zuul:
       url: http://second-saying-hello-service
     call-hello-service:
       path: /**
-      url: http://saying-hello-service
+      url: http://call-hello-service
 
 logging:
   level:
