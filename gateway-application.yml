@@ -57,13 +57,6 @@ logging:
                 TomcatEmbeddedServletContainer: INFO
               undertow:
                 UndertowEmbeddedServletContainer: INFO
-    com:
-      netflix:
-        hystrix: DEBUG
-          strategy:
-            properties:
-              HystrixPropertiesChainedArchaiusProperty: WARN
-
 
 ---
 spring.profiles: docker
