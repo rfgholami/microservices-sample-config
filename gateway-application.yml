@@ -24,7 +24,6 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    composite-service: /product/**
     call-hello-service: /s1/**
     saying-hello-service: /s2/**
 logging:
