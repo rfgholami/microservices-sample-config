@@ -24,9 +24,6 @@ endpoints:
 zuul:
   prefix: /api
   routes:
-    second-saying-hello-service:
-      path: /s1
-      url: http://second-saying-hello-service
     call-hello-service:
       path: /s2
       url: http://call-hello-service
