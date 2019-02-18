@@ -22,13 +22,13 @@ endpoints:
     sensitive: false
 
 zuul:
-  prefix: /api
+  ignoredServices: "*"
   routes:
     call-hello-service:
-      path: /s2
+      path: /s1/**
       url: http://call-hello-service
     saying-hello-service:
-      path: /s3
+      path: /s2/**
       url: http://saying-hello-service
 
 logging:
