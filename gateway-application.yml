@@ -22,14 +22,16 @@ endpoints:
     sensitive: false
 
 zuul:
-  ignoredServices: "*"
   prefix: /api
   routes:
     second-saying-hello-service:
-      path: /**
+      path: /s1
       url: http://second-saying-hello-service
     call-hello-service:
-      path: /**
+      path: /s2
+      url: http://call-hello-service
+    saying-hello-service:
+      path: /s3
       url: http://saying-hello-service
 
 logging:
@@ -68,14 +70,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
-
-zuul:
-  ignoredServices: "*"
-  prefix: /api
-  routes:
-    second-saying-hello-service:
-      path: /**
-      url: http://second-saying-hello-service
-    call-hello-service:
-      path: /**
-      url: http://saying-hello-service
