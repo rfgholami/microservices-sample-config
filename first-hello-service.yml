@@ -1,7 +1,5 @@
-my-property: test-property
-
 server:
-  port: 9875
+  port: 0
 
 eureka:
   client:
@@ -13,11 +11,11 @@ eureka:
     leaseExpirationDurationInSeconds: 2
     hostname: localhost
     preferIpAddress: false
----
 
+
+---
 spring:
   profiles: docker
-
 eureka:
   instance:
     preferIpAddress: true

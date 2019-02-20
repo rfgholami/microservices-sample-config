@@ -46,8 +46,7 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    call-hello-service: /s1/**
-    saying-hello-service: /s2/**
+    call-hello-service: /call/**
 logging:
   level:
     ROOT: WARN
