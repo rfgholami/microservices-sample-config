@@ -13,7 +13,6 @@ eureka:
     instanceInfoReplicationIntervalSeconds: 5
     initialInstanceInfoReplicationIntervalSeconds: 5
 
-
 hystrix:
   threadpool:
     default:
