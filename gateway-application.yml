@@ -71,6 +71,10 @@ logging:
               undertow:
                 UndertowEmbeddedServletContainer: INFO
 
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/user
 ---
 
 spring:
@@ -82,3 +86,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://auth:9999/user
