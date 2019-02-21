@@ -90,4 +90,4 @@ eureka:
 security:
   oauth2:
     resource:
-      userInfoUri: http://auth:9999/user
+      userInfoUri: http://auth-server:9999/user
