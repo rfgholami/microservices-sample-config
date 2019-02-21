@@ -18,7 +18,6 @@ spring:
     user:
       password: password
 
-
 security.oauth2.client:
   clientId: client
   clientSecret: secret
@@ -27,27 +26,19 @@ security.oauth2.client:
 
 logging.level:
   root: WARN
-  org:
-    springframework:
-      security:
-        oauth2: DEBUG
-          config:
-            annotation.web.configurers.FrameworkEndpointHandlerMapping: INFO
-          provider:
-            client.ClientCredentialsTokenGranter: DEBUG
-            password.ResourceOwnerPasswordTokenGranter: DEBUG
-            code.AuthorizationCodeTokenGranter: DEBUG
-            implicit.ImplicitTokenGranter: DEBUG
-            approval.ApprovalStoreUserApprovalHandler: DEBUG
-            endpoint.TokenEndpoint: INFO
-            approval.AuthorizationEndpoint: INFO
+  orgspringframework.security.oauth2: DEBUG
+  org.springframework.security.oauth2.config.annotation.web.configurers.FrameworkEndpointHandlerMapping: INFO
+  org.springframework.security.oauth2.provider.client.ClientCredentialsTokenGranter: DEBUG
+  org.springframework.security.oauth2.provider.password.ResourceOwnerPasswordTokenGranter: DEBUG
+  org.springframework.security.oauth2.provider.code.AuthorizationCodeTokenGranter: DEBUG
+  org.springframework.security.oauth2.provider.implicit.ImplicitTokenGranter: DEBUG
+  org.springframework.security.oauth2.provider.approval.ApprovalStoreUserApprovalHandler: DEBUG
+  org.springframework.security.oauth2.provider.endpoint.TokenEndpoint: INFO
+  org.springframework.security.oauth2.provider.approval.AuthorizationEndpoint: INFO
 
   # Set INFO to see the allocated port
-      boot:
-        context:
-          embedded:
-            tomcat.TomcatEmbeddedServletContainer: INFO
-            undertow.UndertowEmbeddedServletContainer: INFO
+  org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
+  org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO
 
   se.callista: INFO
 
